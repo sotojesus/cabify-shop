@@ -1,0 +1,68 @@
+<resources>
+    <string name="app_name">Cabify Shop</string>
+    <string name="activity_products">Products</string>
+    <string name="activity_product_detail">Product</string>
+    <string name="activity_cart">Shopping Cart</string>
+
+    <!-- Products Screen -->
+    <string name="products_empty_title">No products available</string>
+    <string name="products_empty_description">Try refreshing to fetch new products.</string>
+    <string name="products_refresh">Refresh</string>
+    <string name="products_go_to_cart_no_items">Go to Shopping Cart</string>
+    <string name="products_go_to_cart_with_items">Go to Shopping Cart (%1$d items)</string>
+
+    <!-- Product Detail Screen -->
+    <string name="product_item_promotion_available_cd">Promotion available icon</string>
+    <string name="product_item_image_cd">Product image</string>
+    <string name="product_detail_add_to_cart_cd">Add product to cart button</string>
+    <string name="lorem_ipsum">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit nisi ex, et
+        lacinia dui mollis et. In sit amet orci fringilla, aliquet urna cursus, fringilla tellus.
+        Ut ac est eu augue euismod luctus. Aliquam sodales non lectus ut laoreet. Vestibulum justo
+        leo, aliquam interdum dolor vitae, efficitur scelerisque lectus. Pellentesque ligula tortor,
+        maximus in turpis et, rhoncus dictum justo. Pellentesque habitant morbi tristique senectus
+        et netus et malesuada fames ac turpis egestas. Suspendisse rhoncus tellus id libero sagittis
+        faucibus. Duis lacinia aliquam lectus, et viverra velit porttitor non. Duis accumsan est
+        eget nibh venenatis tincidunt. Proin a malesuada risus. Cras mi felis, malesuada quis auctor
+        at, finibus ac justo.\n\n
+        Donec nec fermentum ligula. Sed malesuada rhoncus dui id volutpat. In varius id libero
+        scelerisque porttitor. Orci varius natoque penatibus et magnis dis parturient montes,
+        nascetur ridiculus mus. In ac dapibus velit, nec vehicula orci. Suspendisse potenti. In
+        euismod pretium magna a faucibus. Praesent tincidunt ex arcu. Nunc dictum vestibulum purus
+        ut efficitur. Etiam interdum lorem eget diam tristique, in porttitor dui euismod. Aliquam
+        scelerisque vestibulum volutpat. In hac habitasse platea dictumst. Proin vestibulum a justo
+        sit amet placerat.
+    </string>
+
+    <!-- Cart Screen -->
+    <string name="cart_item_quantity">Quantity: %1$d</string>
+    <string name="cart_promotions_applied">Promotions applied: %1$d</string>
+    <string name="cart_promotions_applied_savings">You\'re saving %1$s (%2$.0f%%)</string>
+    <string name="cart_total">Total</string>
+    <string name="cart_pay_button">Pay %1$s (%2$d items)</string>
+    <string name="cart_empty_title">Your cart is empty</string>
+    <string name="cart_empty_description">Try adding some items first and then come back here.</string>
+    <string name="cart_checkout_not_implemented">Checkout not implemented.</string>
+    <string name="cart_quantity_updated">Quantity updated</string>
+    <string name="cart_update_quantity_failed">Unable to update quantity. Try later.</string>
+
+    <!-- Promotions Applied Sheet -->
+    <string name="promotion_applied_title">Promotions applied: %1$d</string>
+    <string name="promotion_buy_x_get_x_title">Buy %1$d, Get %2$d Free</string>
+    <string name="promotion_buy_x_get_x_description">On &lt;b>%1$s&lt;/b> when purchasing minimum %2$d units.</string>
+    <string name="promotion_fixed_bulk_price_title">Reduced Unit Price: %1$s (&lt;s>%2$s&lt;/s>)</string>
+    <string name="promotion_fixed_bulk_price_description">On &lt;b>%1$s&lt;/b> when purchasing a minimum of %2$d units.</string>
+    <string name="promotion_applied_savings">You\'re saving %1$s on this item!</string>
+    <string name="product_detail_added_to_cart">Added to cart.</string>
+    <string name="product_detail_add_to_cart_failed">Unable to add product to cart. Try later.</string>
+    <string name="product_detail_error_loading_product">Error while loading product. Try later.</string>
+    <string name="product_detail_missing_product_code">This activity requires a product code, but it was missing</string>
+    <string name="product_image_aspect_ratio">H,4:3</string>
+    <string name="product_detail_fab_add_to_cart_no_items">Add to cart</string>
+    <string name="product_detail_fab_add_to_cart_with_items">Add to cart (%1$d in cart)</string>
+
+    <!-- General -->
+    <string name="sync_error">An error has occurred during the sync. Please try later.</string>
+    <string name="menu_item_quantity_remove">Remove</string>
+
+</resources>

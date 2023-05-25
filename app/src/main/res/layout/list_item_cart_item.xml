@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="?listPreferredItemHeightLarge"
+    android:paddingVertical="@dimen/spacing_large"
+    android:paddingHorizontal="@dimen/spacing_large">
+
+    <ImageView
+        android:id="@+id/productThumbnail"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:scaleType="centerCrop"
+        android:layout_marginEnd="@dimen/spacing_large"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:background="@color/image_placeholder" />
+
+    <TextView
+        android:id="@+id/productTitleView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_medium"
+        android:textAppearance="?textAppearanceSubtitle1"
+        app:layout_constraintBottom_toTopOf="@id/productQuantityView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/productThumbnail"
+        app:layout_constraintEnd_toStartOf="@id/priceContainer"
+        app:layout_constraintVertical_chainStyle="packed"
+        android:fontFamily="sans-serif-medium"
+        tools:text="Product title"/>
+
+    <TextView
+        style="@style/Widget.AppCompat.Spinner"
+        android:id="@+id/productQuantityView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?textAppearanceBody2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/productTitleView"
+        app:layout_constraintStart_toStartOf="@id/productTitleView"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="Quantity: 2" />
+
+    <LinearLayout
+        android:id="@+id/priceContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/productTitleView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/productTitleView"
+        android:orientation="vertical"
+        android:gravity="end">
+
+        <TextView
+            android:id="@+id/productDiscountedPriceView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?textAppearanceBody1"
+            tools:text="$100.00" />
+
+        <TextView
+            android:id="@+id/productPriceWithoutDiscountView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?textAppearanceCaption"
+            android:gravity="center_vertical"
+            app:drawableStartCompat="@drawable/ic_discount_18dp"
+            app:drawableTint="@color/teal_700"
+            android:drawablePadding="@dimen/spacing_small"
+            tools:text="$15.00" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

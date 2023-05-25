@@ -1,0 +1,28 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+//
+//plugins {
+//    id("com.android.settings")
+//}
+//
+//android {
+//    compileSdk 33
+//    minSdk 24
+//}
+
+rootProject.name = "CabifyShop"
+include ':app'
+include ':data'
+include ':domain'

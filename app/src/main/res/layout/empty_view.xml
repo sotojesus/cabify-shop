@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- TODO: Convert to a fully self-managed custom view for easier portability and re-utilization -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/emptyContainer"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:visibility="gone"
+    tools:layout_gravity="center"
+    tools:visibility="visible">
+
+    <TextView
+        android:id="@+id/emptyTitleView"
+        android:textAppearance="?textAppearanceHeadline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        tools:text="We're having troubles connecting"/>
+
+    <TextView
+        android:id="@+id/emptyDescriptionView"
+        android:textAppearance="?textAppearanceBody1"
+        android:textColor="?colorSecondary"
+        android:layout_marginVertical="@dimen/spacing_medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:lineSpacingMultiplier="1.3"
+        tools:text="Check your connection and try again"/>
+
+    <Button
+        style="?borderlessButtonStyle"
+        android:id="@+id/emptyAction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        tools:visibility="visible"
+        tools:text="retry"/>
+
+</LinearLayout>

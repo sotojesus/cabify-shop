@@ -1,0 +1,65 @@
+[versions]
+androidGradlePlugin = "8.0.1"
+androidxCore = "1.8.0"
+androidxEspresso = "3.4.0"
+androidxFragmentKtx = "1.5.7"
+androidxLifecycle = "2.3.1"
+androidxRecyclerView = "1.3.0"
+androidxSwipeRefreshLayout = "1.1.0"
+androidxTestJunit = "1.1.3"
+androidxWork = "2.8.1"
+glide = "4.14.2"
+kotlin = "1.8.20"
+kotlin-android = "1.7.20"
+materialComponents = "1.8.0"
+retrofit = "2.9.0"
+rxJava = "3.1.6"
+rxAndroid = "3.0.2"
+room = "2.5.0"
+dagger = "2.44.2"
+okhttp = "4.10.0"
+junit = "4.13.2"
+
+[libraries]
+androidx-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "androidxCore" }
+androidx-fragment-ktx = { group = "androidx.fragment", name = "fragment-ktx", version.ref = "androidxFragmentKtx" }
+androidx-lifecycle = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "androidxLifecycle" }
+androidx-recyclerView = { group = "androidx.recyclerview", name = "recyclerview", version.ref = "androidxRecyclerView" }
+androidx-swiperefreshlayout = { group = "androidx.swiperefreshlayout", name = "swiperefreshlayout", version.ref = "androidxSwipeRefreshLayout" }
+androidx-work = { group = "androidx.work", name = "work-runtime-ktx", version.ref = "androidxWork" }
+androidx-work-rxjava = { group = "androidx.work", name = "work-rxjava3", version.ref = "androidxWork" }
+retrofit-core = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
+retrofit-converter-gson = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofit" }
+retrofit-adapter-rxjava = { group = "com.squareup.retrofit2", name = "adapter-rxjava3", version.ref = "retrofit" }
+okhttp-logging-interceptor  = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "okhttp" }
+rxjava-core = { group = "io.reactivex.rxjava3", name = "rxjava", version.ref = "rxJava" }
+rxandroid = { group = "io.reactivex.rxjava3", name = "rxandroid", version.ref = "rxAndroid" }
+material-components = { group = "com.google.android.material", name = "material", version.ref = "materialComponents" }
+room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
+room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
+room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
+room-rxjava = { group = "androidx.room", name = "room-rxjava3", version.ref = "room" }
+glide = { group = "com.github.bumptech.glide", name = "glide", version.ref = "glide" }
+
+# Dagger & Dagger Android for fast dependency injection.
+dagger-core = { group = "com.google.dagger", name = "dagger", version.ref = "dagger" }
+dagger-compiler = { group = "com.google.dagger", name = "dagger-compiler", version.ref = "dagger" }
+dagger-android = { group = "com.google.dagger", name = "dagger-android", version.ref = "dagger" }
+dagger-android-support = { group = "com.google.dagger", name = "dagger-android-support", version.ref = "dagger" }
+dagger-android-processor = { group = "com.google.dagger", name = "dagger-android-processor", version.ref = "dagger" }
+
+# Testing
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-test-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidxTestJunit" }
+androidx-test-espresso = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "androidxEspresso" }
+
+[bundles]
+room = ["room-ktx", "room-runtime", "room-rxjava"]
+dagger-android = ["dagger-android", "dagger-android-support"]
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
+android-library = { id = "com.android.library", version.ref = "androidGradlePlugin" }
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin-android" }

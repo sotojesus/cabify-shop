@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/item_quantity_remove"
+        android:title="@string/menu_item_quantity_remove" />
+    <item android:id="@+id/item_quantity_1"
+        android:title="1" />
+    <item android:id="@+id/item_quantity_2"
+        android:title="2" />
+    <item android:id="@+id/item_quantity_3"
+        android:title="3" />
+    <item android:id="@+id/item_quantity_4"
+        android:title="4" />
+    <item android:id="@+id/item_quantity_5"
+        android:title="5" />
+    <item android:id="@+id/item_quantity_6"
+        android:title="6" />
+    <item android:id="@+id/item_quantity_7"
+        android:title="7" />
+    <item android:id="@+id/item_quantity_8"
+        android:title="8" />
+    <item android:id="@+id/item_quantity_9"
+        android:title="9" />
+</menu>

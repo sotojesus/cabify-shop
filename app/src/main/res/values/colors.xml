@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+
+    <color name="image_placeholder">#eef</color>
+    <color name="card_stroke">#dedede</color>
+
+    <!-- Divider -->
+    <color name="divider_light">#1f000000</color> <!-- 12% black -->
+
+    <!-- System icons -->
+    <color name="icon_system">#8a000000</color> <!-- 54% black -->
+    <color name="icon_system_inactive">#42000000</color> <!-- 26% black -->
+
+</resources>
