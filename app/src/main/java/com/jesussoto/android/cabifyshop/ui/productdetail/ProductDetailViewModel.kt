@@ -30,11 +30,9 @@ class ProductDetailViewModel @Inject constructor(
     @RxScheduler(Default) private val scheduler: Scheduler
 ): ViewModel() {
 
-    private lateinit var productCode: String
-
     private lateinit var product: Product
 
-    private val productCodeSubject = BehaviorSubject.create<String>()
+    private val productCode = BehaviorSubject.create<String>()
 
     private val uiModel = BehaviorSubject.createDefault<ProductDetailUIModel>(ProductDetailUIModel.Idle())
 
@@ -44,7 +42,7 @@ class ProductDetailViewModel @Inject constructor(
 
     init {
         // TODO: Move this fetch and combine logic to an UseCase in the domain layer.
-        disposables.add(productCodeSubject.toFlowable(BackpressureStrategy.LATEST)
+        disposables.add(productCode.toFlowable(BackpressureStrategy.LATEST)
             .filter(Objects::nonNull)
             .switchMap(this::getProduct)
             .switchMap(this::getQuantityInCartForProduct)
@@ -74,9 +72,7 @@ class ProductDetailViewModel @Inject constructor(
     // Ideally the productCode should be passed in as constructor parameter injecting it
     // using Dagger's assisted injection.
     internal fun setProductCode(productCode: String) {
-        Log.d(TAG, "productCode: $productCode")
-        this.productCode = productCode
-        this.productCodeSubject.onNext(productCode)
+        this.productCode.onNext(productCode)
     }
 
     internal fun navigateBack() {
@@ -115,9 +111,14 @@ class ProductDetailViewModel @Inject constructor(
     }
 
     private fun handleProductError(th: Throwable) {
-        Log.d(TAG, "Error while loading product=$productCode", th)
+        Log.e(TAG, "Error while loading product=${productCode.value}", th)
         uiAction.onNext(ProductDetailUIAction.ShowToast(R.string.product_detail_error_loading_product))
         uiAction.onNext(ProductDetailUIAction.CloseAndNavigateBack)
+    }
+
+    override fun onCleared() {
+        super.onCleared()
+        disposables.dispose()
     }
 
     companion object {
